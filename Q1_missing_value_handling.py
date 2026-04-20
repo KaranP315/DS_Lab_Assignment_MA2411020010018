@@ -10,6 +10,7 @@ def clean_retail_sales():
     
     # Create the Imputation_Method column
     df['Imputation_Method'] = np.nan
+    df['Imputation_Method'] = df['Imputation_Method'].astype('object')
     
     # Condition 1: Missing SalesAmount, Category Electronics, Region South
     # But instruction says: Some SalesAmount values are missing only for "Electronics" category in "South" region.
